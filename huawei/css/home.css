@@ -1,0 +1,553 @@
+html{
+    font-size:16px;
+}
+body{
+    margin:0;
+    padding:0;
+    font-family: "microsoft yahei", "SansSerif";
+    font-size: 16px;
+    font-size:1rem;
+}
+ul,li{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+/* 重置bootstrap默认行为,取消媒体查询 */
+.contentWrap{
+    width:100%;
+    position:relative;
+}
+
+/* container 内部的容器 */
+.contentWrap > .container{
+    width:100%;
+    max-width:1200px;
+}
+/*
+*  header 部分样式
+*  开始
+*/
+/**** topBar中内容相关样式设计 ****/
+div.topBar{
+    background: #5D5D58;
+    height: 36px;
+}
+div.topBar li{
+    display:block;
+    float:left;
+}
+div.topBar li>a {
+    height:36px;
+    line-height: 36px;
+    display: inline-block;
+    padding: 0 15px;
+    color:#aaa;
+}
+div.topBar li>a:hover{
+    text-decoration: none;
+    background-color: #333;
+}
+div.topBar li.active>a{
+    color:#333;
+    background-color: #FFFFFF;
+}
+/**** topBar 样式结束 ***/
+/*** logo及用户登录部分 开始***/
+header div.headerBanner{
+    height:80px;
+    line-height: 80px;
+    border-bottom: 1px solid  #e5e5e5;
+}
+header div.headerBanner a.huawei_logo{
+    display: inline-block;
+    height:56px;
+    width: 170px;
+    line-height:56px;
+    background: url(../imgs/logo_new.png) no-repeat center center;
+}
+header div.headerBanner ul.pull-left li{
+    float:left;
+    height:80px;
+    line-height: 80px;
+}
+header div.headerBanner ul.pull-left li a{
+    padding:0 15px;
+    border-right:1px solid #333;
+    color:#333;
+}
+header div.headerBanner ul.pull-left li:last-child a{
+    border-right: none;
+}
+/*** logo及用户登录部分 结束 ***/
+/** mainNav 主导航部分开始 **/
+header div.mainNavRow{
+    border-bottom: 1px solid #e5e5e5;
+    height:54px;
+    background-color: #F7F7F7;
+}
+#mainNav li{
+    float:left;
+    padding:0 16px;
+}
+#mainNav li a{
+    display:inline-block;
+    height:52px;
+    line-height: 52px;
+    color:#333;
+    border:2px solid transparent;
+}
+#mainNav li a:hover{
+    color:#CB3034;
+    text-decoration: none;
+    border-bottom-color: #CB3034;
+}
+/* 我想 */
+#mainNav li:first-child{
+    background: white url(../imgs/user_icon.png) no-repeat 12px center;
+    border:1px solid #eeeeee;
+    border-top:0;
+    border-bottom: 0;
+    padding-left: 35px;
+}
+#mainNav li:first-child a{
+    background: url(../imgs/icon_slide_down.png) no-repeat right center;
+    padding-right:19px;
+}
+#mainNav li:first-child a:hover{
+    border-bottom: transparent;
+    background: url(../imgs/icon_slide_up.png) no-repeat right center;
+}
+/* 使搜索框垂直居中 */
+#mainNav li:last-child{
+    float:right;
+    padding:0;
+    height:56px;
+    position: relative;
+    width: 186px;
+}
+#mainNav div.searchBox{
+    position: absolute;
+    margin: auto;
+    /* left: 0; */
+    /* right: 0px; */
+    bottom: 0;
+    top: 0;
+    /* width: 186px; */
+    height: 36px;
+}
+#mainNav div.searchBox:after{
+    content:"";
+    display: table;
+    height:0;
+    clear:both;
+}
+#mainNav div.searchBox input{
+    height:36px;
+    float:left;
+    vertical-align: middle;
+    line-height: 36px;
+    border:0;
+    outline: none;
+    margin:0;
+    padding:0;
+}
+#mainNav div.searchBox input.button{
+    width:36px;
+    background: white url(../imgs/icon_find.png) no-repeat right center;
+}
+#mainNav div.searchBox input.text{
+    width:150px;
+}
+/* 消除浮动影响 */
+#mainNav:after{
+    content:"";
+    display: table;
+    height:0;
+    clear:both;
+}
+/* 子导航菜单显示 */
+#subNavPanel{
+    background:  #F7F7F7;
+}
+#subNavPanel div[data-panel]{
+    padding-top:10px;
+    padding-bottom:20px;
+    width:100%;
+}
+#subNavPanel li{
+    height:34px;
+    line-height: 34px;
+}
+#subNavPanel a{
+    color: #333;
+}
+#subNavPanel a:hover{
+    color:#0066ff;
+}
+
+#subNavPanel div.inspect ul {
+    width:80%;
+}
+
+#subNavPanel div.inspect li{
+    border-bottom:1px solid #cccccc;
+    height: 48px;
+    line-height: 48px;
+}
+#subNavPanel div.inspect li a{
+    font-size:1.2em;
+    font-weight: 200;
+}
+#subNavPanel figure{
+    padding-top:5%;
+    margin:0 auto;
+}#subNavPanel .inspect figure{
+    width:90%;
+ }
+#subNavPanel .solution figure img,
+#subNavPanel .support figure img{
+    width:100%;
+}
+#subNavPanel figure p{
+    line-height: 2em;
+    padding-top:10px;
+}
+#subNavPanel figure p a{
+    font-weight: 700;
+}
+#subNavPanel .title{
+    color:#CB3034;
+    font-weight:bold;
+}
+#subNavPanel .subTitle{
+    font-weight:bold;
+}
+#subNavPanel div.partner a.qudao{
+    background: url(../imgs/partner-nav-img-01.jpg) no-repeat left center;
+    padding-left:35px;
+}
+#subNavPanel div.partner a.fangan{
+    background: url(../imgs/partner-nav-img-02.jpg) no-repeat left center;
+    padding-left:35px;
+}
+#subNavPanel div.partner p{
+    text-align: center;
+}
+#subNavPanel div.partner a.portal{
+    background: url(../imgs/partner-nav-img-03.jpg) no-repeat left center;
+    padding-left:25px;
+    color:#0066FF;
+}
+/* 清除每个子面板浮动带来的影响 */
+#subNavPanel>div:after{
+    content:"";
+    display:table;
+    height:0;
+    clear:both;
+}
+/* 子导航菜单显示 结束 */
+
+/** mainNav 主导航部分结束 **/
+/*
+*  header 部分样式
+*  结束
+*/
+
+/* 每个块之间间隔15px */
+div.contentWrap>div {
+    margin-bottom:15px;
+}
+/** 轮播部分 **/
+#hua_banner_carousel div.carousel-caption{
+    position:absolute;
+    width: 100%;
+    left:0;
+    top:0;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+#hua_banner_carousel div.carousel-caption p>a{
+    display: inline-block;
+    border:0;
+    outline: none;
+    background-color: #B02D2E;
+    padding: 10px 20px;
+    color:#ffffff;
+    border-radius: 5px;
+    margin-top:20px;
+}
+#hua_banner_carousel div.banner_contentWrap{
+    /*display: inline-block;*/
+    padding-top:100px;
+}
+#hua_banner_carousel div.banner_contentWrap .text-left{
+    text-align: left;
+}
+#hua_banner_carousel a.arrow-left{
+    background: url(../imgs/btn_prev.png) no-repeat left center;
+}
+#hua_banner_carousel a.arrow-right{
+    background: url(../imgs/btn_next.png) no-repeat right center;
+}
+
+
+#news div.title{
+    height:60px;
+    line-height: 60px;
+    background: url(../imgs/homepage_news_01.png) no-repeat left center;
+    background-size: 90% 100%;
+}
+#news a{
+    color:#333;
+
+}
+#news div.title a{
+    padding-left:30%;
+    font-size:1.2em;
+}
+#news div.newsList{
+    background-color: #F7F7F7;
+
+}
+#news li {
+    height:60px;
+    line-height: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#news div.arrow{
+    display:inline-block;
+    height:60px;
+    line-height: 30px;
+}
+#news div.arrow span{
+    display: block;
+    height:30px;
+}
+#latestNews a img,
+#techNews a img{
+    width:100%;
+}
+#latestNews a,
+#techNews a,
+#exhibition a{
+    font-size:1.1rem;
+    font-weight:500;
+    color:#333333;
+}
+#latestNews figure,
+#techNews figure{
+    padding-bottom:20px;
+}
+/*#video div.player{
+    position:relative;
+}
+#video div.player div.innerPlayer{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+#video div.player div.innerPlayer video{
+    width:100%;
+    height:auto;
+}
+#video div.player div.close{
+    position:absolute;
+    width:30px;
+    height:30px;
+    top:0;
+    right:35px;
+    background: url(../imgs/video-close.png) no-repeat center center #000000;
+}
+#video div.cover img{
+    width:100%;
+}*/
+#exhibition{
+    background-color: #F5F5F5;
+}
+.centerHeader { text-align: center;}
+#exhibition .centerHeader a{ font-size:1.5rem;}
+#exhibition img{
+    width:100%;
+}
+
+footer{
+    color:white;
+    background-color: #272727;
+    padding-top:30px;
+}
+footer a{
+    color:white;
+}
+footer .category li{
+    height:34px;
+    line-height:34px;
+}
+
+footer .category li.title{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+footer div.link li{
+    display:inline-block;
+    margin:12px 10px 12px 0;
+    width:32px;
+    height:32px;
+}
+footer div.link img.top_pic{
+    padding:10px 0;
+}
+footer div.link li img{
+    width: 100%;
+}
+
+footer div.link{
+    color:white;
+}
+
+footer div.link p{
+    color:white;
+    padding-top:30px;
+}
+
+footer div.bottom{
+    color:white;
+    padding: 30px 0;
+}
+
+footer div.bottom li{
+    float: left;
+}
+footer div.bottom li:after{
+    content:"|";
+    padding-left:10px;
+    padding-right:10px;
+}
+footer div.bottom li:last-child:after{
+    content:"";
+    padding: 0;
+}
+
+footer a:hover{
+    color:white;
+}
+#video div.videoWrap{
+    position:relative;
+    width:100%;
+    height:auto;
+}
+/* 按钮层，父容器居中 */
+#video div.playerCtr{
+    width:70px;
+    height:70px;
+    border:3px solid #fff;
+    border-radius: 50%;
+
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-top:-38px;
+    margin-left:-38px;
+    overflow: hidden;
+
+    z-index:100;
+}
+#video div.playerCtr div.background{
+    position:absolute;
+    width:100%;
+    height:100%;
+    /*background: rgba(0,0,0,0.5);*/
+    left:0;
+    top:0;
+    z-index:0;
+}
+#video div.playerCtr .normal{
+    background: rgba(0,0,0,0.5);
+}
+#video div.playerCtr .foreOn{
+    background: rgba(100,0,0,0.6);
+}
+#video div.playerCtr .playerOn{
+    background:#aaa;
+}
+/* 所有图片居中 */
+#video div.playerCtr img{
+    position:absolute;
+    margin:auto;
+    left:0;right:0;top:0;bottom:0;
+    z-index:1;
+}
+#video div.playerCtr div.play_start img{
+    width: 30px;
+    height:30px;
+}
+#video div.playerCtr div.play_start_hide{
+    display:none;
+}
+#video div.playerCtr div.play_wait{
+    width:100%;
+    height:64px;
+    display:none;
+}
+
+#video div.playerCtr div.play_wait img{
+    width:80%;
+    height:80%;
+}
+/* 等待状态，其一直旋转，设定旋转动画 */
+@keyframes player_wait_rotate {
+    0% { }
+    100% { transform: rotate(360deg); }
+}
+#video div.playerCtr div.play_wait{
+    -webkit-animation: player_wait_rotate 3s linear infinite;
+}
+#video div.foreground img{
+    width:100%;
+    height:auto;
+    cursor: pointer;
+}
+#video div.player{
+    position:relative;
+    top:0;
+    width:100%;
+    cursor: pointer;
+    display: none;
+}
+#video div.player div.close{
+    position:absolute;
+    width:30px;
+    height:30px;
+    top:0;
+    right:35px;
+    background: url(../imgs/video-close.png) no-repeat center center #000000;
+}
+#video video{
+    width:100%;
+    max-width:1024px;
+    height:auto;
+    margin:0 auto;
+    display: block;
+}
+
+/** 调试 轮播，隐藏header */
+/*header{ display: none;}*/
+
+/* 暂时隐藏banner */
+/*#hua_banner_carousel {
+    display: none;
+}*/
+
+/* 暂时隐藏新闻相关 */
+/*#news, #latestNews,#exhibition,#techNews,footer{
+    display: none;
+}*/
+/* 暂停开发播放器 */
+/*#video{
+    display:none;
+}*/
+

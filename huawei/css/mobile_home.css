@@ -1,0 +1,223 @@
+/* 移动菜单*/
+@media only screen and (max-width: 991px) and (min-width:769px){
+    #mobileMainNav {
+        width:54%;
+        box-shadow: 0 0 10px;
+        right:0;
+    }
+}
+@media only screen and (max-width: 768px){
+    #mobileMainNav{
+        width:100%;
+    }
+
+    footer div.category ul{
+        margin-left:20px;
+    }
+    footer div.category li{
+        height:36px;
+        line-height: 36px;
+    }
+    footer div.category a{
+        font-weight: normal;
+    }
+
+    footer div.category li.title{
+        border-bottom:1px solid #535353;
+        margin-bottom:10px;
+        margin-top:20px;
+    }
+    footer div.category li.home{
+        background: url(../imgs/winwin_home_icon.png) no-repeat left center;
+        padding-left:25px;
+        margin-left:-25px;
+        border-color:transparent;
+    }
+}
+/* 重写container宽度，定义为全屏 */
+@media only screen and (max-width: 991px){
+    .container {
+        width:100%;
+    }
+    header div.headerBanner{
+        height:60px;
+        line-height:60px;
+    }
+    header div.headerBanner div.visible-sm.visible-xs{ /*高度被撑高至80px？？？？*/
+        height:60px;
+        overflow: hidden;
+    }
+    footer .inlineBlock{
+        display: inline-block;
+    }
+    footer div.center{
+        text-align:center
+    }
+    footer div.center .left{
+        text-align: left;
+    }
+    footer div.link{
+        padding-top:40px;
+    }
+}
+/** 轮播，与媒体查询有关 **/
+@media only screen and (min-width: 768px){
+    /* 768px以上完全展开 */
+    #hua_banner_carousel div.item{
+        height:540px;
+    }
+    #hua_banner_carousel div.item img.main_lg{
+        width:1920px;
+        max-width: none;
+        height:540px;
+        display: block;
+        position: absolute;
+        left:50%;
+        margin-left:-960px;
+    }
+}
+@media only screen and (max-width: 767px){
+    #hua_banner_carousel div.item img.main_sm{
+        width:100%;
+    }
+    #hua_banner_carousel div.item{
+        height:600px;
+    }
+    #hua_banner_carousel div.carousel-caption{
+        padding-top:56%;
+    }
+
+    #hua_banner_carousel div.carousel-caption div.div-text{
+        background-color: #333333;
+        padding-bottom:100%;
+        text-align:left;
+    }
+    /* latestNews */
+    #latestNews figure{
+        padding-bottom:20px;
+    }
+}
+@media only screen and (max-width: 480px){
+    #hua_banner_carousel div.item{
+        height:450px;
+    }
+}
+/* 头部搜索和菜单按钮 */
+header div.headerBanner span.mobile_search_icon{
+    display: inline-block;
+    height:60px;
+    width: 48px;
+    cursor: pointer;
+    background: url(../imgs/icon_find.png) no-repeat center center;
+}
+header div.headerBanner span.mobile_nav_icon{
+    display: inline-block;
+    height:60px;
+    width: 48px;
+    cursor: pointer;
+    position:relative;
+    background: url(../imgs/menu_icon.png) no-repeat center center;
+}
+#mobile_search{
+    height:54px;
+    width:100%;
+    padding:8px 10px;
+    background-color: #999999;
+    position:absolute;
+    top:60px;
+    display: none;
+}
+#mobile_search input{
+    height:38px;  /*height:100%;*/
+    width:100%;
+    border:0;
+}
+#mobile_search div.input-group-addon{
+    background: white;
+    border:0;
+}
+#mobileMainNav{
+    height:100%;
+    position:fixed;
+    z-index:1000;
+    top:0;
+    /*right:0;*/
+    overflow: auto;
+    background-color: #FFFFFF;
+    right:-100%;
+    transition : all 1s;  /* 设定隐藏显示动画 */
+}
+#mobileMainNav > ul{
+    position:relative;
+}
+#mobileMainNav > ul li{
+    height:44px;
+    line-height:44px;
+    border-bottom: 1px solid #EDEDED;
+    padding-left: 25px;
+    position:relative;
+}
+#mobileMainNav > ul >li.mobile_top_nav:hover {
+    background-color: #ECECFF;
+}
+#mobileMainNav > ul >li:first-child{
+    border-bottom:2px solid #3333FF;
+}
+#mobileMainNav > ul >li span{
+    display: block;
+    height:14px;
+    width:15px;
+    position:absolute;
+    margin:auto 0;
+    top:0;bottom:0;
+    right:35px;
+}
+#mobileMainNav > ul >li:first-child span{
+    background:url(../imgs/CBG_moblie_nav_005.png) no-repeat center center;
+    width: 40px;
+    height:40px;
+    right:22px;
+    cursor: pointer;
+}
+#mobileMainNav > ul >li a{
+    color:#cc0000;
+    width:100%;
+    display: inline-block;
+}
+#mobileMainNav > ul >li:first-child a{ /* 取消第一个a的100%宽度 */
+    width:auto;
+}
+#mobileMainNav > ul >li a{
+    color:#333333;
+}
+#mobileMainNav li.mobile_top_nav span{
+    background: url(../imgs/CBG_moblie_nav_004.png) no-repeat center center;
+}
+#mobileMainNav li.mobile_main_nav_topic span{
+    background: url(../imgs/mobile_all_icons.png) no-repeat -398px -196px;
+}
+#mobileMainNav li.mobile_main_nav_topic.active span{
+    background-position: -398px -152px;
+}
+#mobileMainNav > ul >li a:hover{
+    text-decoration: none;
+}
+#mobileMainNav li.mobile_sub_nav{
+    padding-left:0;
+    background-color: #D3E9FF;
+    height:auto;
+    border-top:2px solid #999999;
+    border-bottom: 2px solid #999999;
+    display:none;
+}
+#mobileMainNav li.mobile_sub_nav li{
+    border-color: #AAC2E2;
+}
+#mobileMainNav li.mobile_sub_nav li.title,
+#mobileMainNav li.active{
+    color: #CC0000;
+}
+#mobileMainNav li.mobile_sub_nav li.active{
+    background-color: #99CCFF;
+}
+
